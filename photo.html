@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='shortcut icon' href='./img/favicon.ico' type='image/x-icon'>
+  <title>나이브스 아웃</title>
+<style>
+body {font-family: '바탕';
+  background-image:url(./img/back.png);}
+*{margin:0;
+    padding:0;
+    text-decoration:none;}
+  .clear{clear:both;}
+#logo{display:block;
+   position:absolute ;
+   left:1590px;
+   top:15px;}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 1);
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: left;
+  margin-left:50px;
+  font-weight:bold;
+}
+
+.overlay a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 35px;
+  color: white;
+  display: block;
+  transition: 0.5s;}
+.overlay a:hover{color: #feca04;
+  text-decoration:line-through;}
+a:viseted{text-decoration:none;
+color:white;}
+.overlay .closebtn {position: absolute;
+  top: 30px;
+  right: 30px;}
+footer{width:100%;
+background-color:black;
+height:130px;
+position:absolute;
+font-family:clear;}
+.copy{color:white;
+left:20px;
+margin-top:80px;
+position:absolute;}
+.copyy{color:white;
+left:400px;
+margin-top:80px;
+position:absolute;}
+#pd{left:1400px;
+  margin-top:80px;
+position:absolute;}
+
+    #now{font-size:45px;
+      color:#feca04;
+      border:solid 5px #feca04;
+      padding:10px;
+      width:200px;}
+
+      .sidenav {
+  height:115px; 
+  width: 40px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 50%; 
+  left: 97%;
+ border-radius:15px;
+  background-color:rgba(0,0,0,0.6); 
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.small{padding-left:4px;}
+header{text-align:center;
+font-size:100px;
+width:1000px;
+border-bottom:5px solid #feca04;
+top:200px;
+margin-left:20%;
+margin-right:20%;
+color:#feca04;
+font-weight: bold;
+height:100px;
+padding-bottom:20px;}
+
+section{margin-left:20%;
+width:1000px;
+margin-top:100px;
+color:#feca04;
+text-align:center;
+font-size:35px;
+margin-bottom:100px;}
+
+.photo{border:solid 5px #feca04;
+margin-bottom:50px;
+margin-left:95px;
+margin-right:95px;
+left:100px;
+height:300px;}
+
+
+
+</style>
+</head>
+<body><a name='home'></a>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src='./img/menuclose.png' width='50'></a>
+  <div class="overlay-content">
+     <a href="./index.html">홈</a>
+    <a href="./info.html">주요정보</a>
+    <a href="./story.html">줄거리</a>
+    <a href="./character.html">등장인물</a>
+    <div id='now' >포토</div>
+    <a href="./movie.html">동영상</a>
+  </div>
+</div>
+<a  href='./index.html'><img src='./img/logo2.png' width='300' id='logo'></a>
+
+<span style="cursor:pointer" onclick="openNav()" ><img src='./img/menudrop.png' width='50px' style='margin:50px'></span>
+
+<header>포토
+</header>
+<section>
+<div class='photo'><a href='./img/poster.jpg' target='_blank'><img src='./img/photo0thum.png'></a></div>
+<div class='photo'><a href='./img/poster2.jpg'target='_blank'><img src='./img/photo1thum.png'></a></div>
+<div class='photo'><a href='./img/photo0.jpg'target='_blank'><img src='./img/photo2thum.png'></a></div>
+<div class='photo'><a href='./img/photo1.jpg'target='_blank'><img src='./img/photo3thum.png'></a></div>
+<div class='photo'><a href='./img/photo2.jpg'target='_blank'><img src='./img/photo4thum.png'></a></div>
+<div class='photo'><a href='./img/photo3.jpg'target='_blank'><img src='./img/photo5thum.png'></a></div>
+
+</section>
+
+<div class='clear'></div>
+<footer>  
+    <div class='copy'>MOVIE PLATFORM © 2019 POWSTER</div>
+    <div class='copyy'>© 2019 Lions Gate Entertainment Inc. ALL RIGHTS RESERVED.</div>
+    <img src='./img/lgf.png'  id='pd'>
+  </footer>
+
+<div class="sidenav">
+  <a href="https://www.facebook.com/KnivesOutOfficial/" target='_blank' ><img src='./img/facebook.png' width='30' class='small'></a>
+  <a href="https://www.instagram.com/knivesout/" target='_blank'><img src='./img/instagram.png' width='30'class='small'></a>
+  <a href="#home" ><img src='./img/top.png' width='30'class='small'></a>
+</div>
+<script>
+function openNav() {  document.getElementById("myNav").style.width = "400px";
+
+  document.body.style.backgroundColor = "rgba(0,0,0,0.6)"}
+function closeNav() {document.getElementById("myNav").style.width = "0%";
+document.getElementById("myNav").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";}
+</script>
+     
+</body>
+</html>

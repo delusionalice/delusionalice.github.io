@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='shortcut icon' href='./img/favicon.ico' type='image/x-icon'>
+  <title>나이브스 아웃</title>
+<style>
+body {font-family: '바탕';
+  background-image:url(./img/b2b.png);}
+*{margin:0;
+    padding:0;
+    text-decoration:none;}
+  .clear{clear:both;}
+#logo{display:block;
+   position:absolute ;
+   left:1590px;
+   top:15px;}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 1);
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: left;
+  margin-left:50px;
+  font-weight:bold;
+}
+
+.overlay a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 35px;
+  color: white;
+  display: block;
+  transition: 0.5s;}
+.overlay a:hover{color: #feca04;
+  text-decoration:line-through;}
+a:viseted{text-decoration:none;
+color:white;}
+.overlay .closebtn {position: absolute;
+  top: 30px;
+  right: 30px;}
+footer{width:100%;
+background-color:black;
+height:130px;
+position:absolute;
+font-family:clear;}
+.copy{color:white;
+left:20px;
+margin-top:80px;
+position:absolute;}
+.copyy{color:white;
+left:400px;
+margin-top:80px;
+position:absolute;}
+#pd{left:1400px;
+  margin-top:80px;
+position:absolute;}
+
+    #now{font-size:45px;
+      color:#feca04;
+      border:solid 5px #feca04;
+      padding:10px;
+      width:200px;}
+
+      .sidenav {
+  height:115px; 
+  width: 40px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 50%; 
+  left: 97%;
+ border-radius:15px;
+  background-color:rgba(0,0,0,0.6); 
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.small{padding-left:4px;}
+header{text-align:center;
+font-size:100px;
+width:1000px;
+border-bottom:5px solid #feca04;
+top:200px;
+margin-left:20%;
+margin-right:20%;
+color:#feca04;
+font-weight: bold;
+height:100px;
+padding-bottom:20px;}
+
+section{
+width:1000px;
+margin-top:100px;
+color:#feca04;
+text-align:center;
+font-size:35px;
+margin-bottom:100px;}
+
+.char{border:solid 5px #feca04;
+position:absolute;}
+
+.open-button { border: none;
+  cursor: pointer;
+  opacity: 1;}
+.chat-popup {display: none;
+  position: absolute;
+  left:300px;
+  top: 100px;
+  width:1200px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;}
+
+.form-container { background-color:black;
+border:solid 10px #feca04;
+  max-width: 1500px;
+  padding:0;
+  background-color: black;
+padding:0;}
+
+.cancel{position:absolute;
+right:30px;
+top:30px;
+border:none;
+background-color:black;}
+.cancel:hover{cursor:pointer;}
+
+
+</style>
+</head>
+<body><a name='home'></a>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src='./img/menuclose.png' width='50'></a>
+  <div class="overlay-content">
+     <a href="./index.html">홈</a>
+   <a href="./info.html">주요정보</a>
+    <a href="./story.html">줄거리</a>
+   <div id='now' >등장인물</div>
+    <a href="./photo.html">포토</a>
+    <a href="./movie.html">동영상</a>
+  </div>
+</div>
+<a  href='./index.html'><img src='./img/logo2.png' width='300' id='logo'></a>
+
+<span style="cursor:pointer" onclick="openNav()" ><img src='./img/menudrop.png' width='50px' style='margin:50px'></span>
+
+<header>등장인물
+</header>
+<section style='margin-bottom:0; width:500px; height:50px;'>
+  <button class="open-button" onclick="openForm()"><img src='./img/cha/ct1.jpg' style='left:750px' class='char'></button>
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>할런 트롬비</h1><br>
+    <h4>크리스토퍼 플러머</h4><br>
+    <a href='./img/cha/cha1.jpg' target='_blank'><img src='./img/cha/cha1.jpg' width='800'></a><br><br>
+    <h3>"이게 최선이다. 마음은 이미 정했다"</h3><br>
+  </form>
+</div>
+  <br>
+ <button class="open-button" onclick="openForm1()"><img src='./img/cha/ct0.jpg' style='left:900px' class='char'></button>
+<div class="chat-popup" id="myForm1">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm1()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>워네타 트롬비</h1><br>
+    <h4>K 칼런</h4><br>
+    <a href='./img/cha/cha0.jpg' target='_blank'><img src='./img/cha/cha0.jpg' width='800'></a><br><br>
+  </form>
+</div>
+</div><br></section>
+  <section style='width:300px; float:left;  margin-top:130px;'>
+  <button class="open-button" onclick="openForm2()"> <img src='./img/cha/ct2.jpg' style='left:500px'class='char'></button><div class="chat-popup" id="myForm2">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm2()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>린다 드라이스데일</h1><br>
+    <h4>제이미 리 커티스</h4><br>
+    <a href='./img/cha/cha2.jpg' target='_blank'><img src='./img/cha/cha2.jpg' width='800'></a><br><br>
+    <h3>"아빠와 저는 은밀한 소통 방식이 있었죠"</h3><br>
+  </form>
+</div><br>
+  <button class="open-button" onclick="openForm3()"><img src='./img/cha/ct3.jpg' style='left:400px;margin-top:50px'class='char'></button><br>
+<div class="chat-popup" id="myForm3">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm3()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>리차드 드라이스데일</h1><br>
+    <h4>돈 존슨</h4><br>
+    <a href='./img/cha/cha3.jpg' target='_blank'><img src='./img/cha/cha3.jpg' width='800'></a><br><br>
+    <h3>"모두들 자기 아버지를 우상화하잖아요"</h3><br>
+  </form></div>
+  <button class="open-button" onclick="openForm4()"><img src='./img/cha/ct4.jpg' style='left:450px; margin-top:100px;'class='char'></button>
+  <div class="chat-popup" id="myForm4">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm4()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>휴 "랜섬" 드라이스데일</h1><br>
+    <h4>크리스 에반스</h4><br>
+    <a href='./img/cha/cha4.jpg' target='_blank'><img src='./img/cha/cha4.jpg' width='800'></a><br><br>
+    <h3>"댁들 모두에게 인생 최고의 사건 같은데!"</h3><br>
+  </form></div>
+</section>
+  <section style='width:300px; margin-top:180px; float:left;'>
+
+
+  <button class="open-button" onclick="openForm5()"><img src='./img/cha/ct5.jpg' style='left:1000px'class='char'></button><br>
+<div class="chat-popup" id="myForm5">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm5()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>월터 "월트" 트롬비</h1><br>
+    <h4>마이클 섀넌</h4><br>
+    <a href='./img/cha/cha5.jpg' target='_blank'><img src='./img/cha/cha5.jpg' width='800'></a><br><br>
+    <h3>"아직도 아버지 손길이 느껴져요 뒷일을 맡기신 것처럼…"</h3><br>
+  </form></div>
+
+
+  <button class="open-button" onclick="openForm6()"> <img src='./img/cha/ct6.jpg'class='char' style='left:1100px; margin-top:50px'></button><br>
+<div class="chat-popup" id="myForm6">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm6()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>도나 트롬비</h1><br>
+    <h4>리키 린섬</h4><br>
+    <a href='./img/cha/cha6.jpg' target='_blank'><img src='./img/cha/cha6.jpg' width='800'></a><br><br>
+  </form></div>
+
+
+   <button class="open-button" onclick="openForm7()"><img src='./img/cha/ct7.jpg' class='char'style='left:1050px; margin-top:100px'></button><br>
+<div class="chat-popup" id="myForm7">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm7()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>제이콥 트롬비</h1><br>
+    <h4>제이든 마텔</h4><br>
+    <a href='./img/cha/cha7.jpg' target='_blank'><img src='./img/cha/cha7.jpg' width='800'></a><br><br>
+    <h3>"그 날 저녁 두 가지를 들었어요"</h3><br>
+  </form></div>
+
+</section>
+  <section style='margin-top:480px'>
+   <button class="open-button" onclick="openForm8()"><img src='./img/cha/ct8.jpg' class='char'style='left:420px'></button><br>
+   <div class="chat-popup" id="myForm8">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm8()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>조니 트롬비</h1><br>
+    <h4>토니 콜레트</h4><br>
+    <a href='./img/cha/cha8.jpg' target='_blank'><img src='./img/cha/cha8.jpg' width='800'></a><br><br>
+    <h3>"오해하시는 거에요"</h3><br>
+  </form></div>
+
+
+   <button class="open-button" onclick="openForm9()"><img src='./img/cha/ct9.jpg' class='char'style='margin-top:50px; left:370px'></button><br>
+   <div class="chat-popup" id="myForm9">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm9()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>메그 트롬비</h1><br>
+    <h4>캐서린 랭포드</h4><br>
+    <a href='./img/cha/cha9.jpg' target='_blank'><img src='./img/cha/cha9.jpg' width='800'></a><br><br>
+    <h3>"무서워서 그랬어. 나도 말하기 싫었어"</h3><br>
+  </form></div>
+
+
+   <button class="open-button" onclick="openForm12()"><img src='./img/cha/ct12.jpg' style='left:1070px'class='char'></button><br>
+   <div class="chat-popup" id="myForm12">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm12()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>마르타 카브레라</h1><br>
+    <h4>아나 디 아르마스</h4><br>
+    <a href='./img/cha/cha12.jpg' target='_blank'><img src='./img/cha/cha12.jpg' width='800'></a><br><br>
+    <h3>"거짓말만 생각해도 반응이 와요"</h3><br>
+  </form></div>
+
+
+ </section>
+ <section style='margin-top:150px; margin-bottom:300px'>
+ 
+  <button class="open-button" onclick="openForm10()"><img src='./img/cha/ct10.jpg'class='char' style='left:550px'></button><br>
+  <div class="chat-popup" id="myForm10">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm10()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>브누아 블랑</h1><br>
+    <h4>다니엘 크레이그</h4><br>
+    <a href='./img/cha/cha10.jpg' target='_blank'><img src='./img/cha/cha10.jpg' width='800'></a><br><br>
+    <h3>"증거는 한 입으로 두 말을 하기도 하죠"</h3><br>
+  </form></div>
+
+
+
+<button class="open-button" onclick="openForm11()"><img src='./img/cha/ct11.jpg'class='char' style='left:920px; margin-bottom:100px;'></button><br>
+<div class="chat-popup" id="myForm11">
+  <form action="/action_page.php" class="form-container">
+     <button type="button" class="cancel" onclick="closeForm11()"><img src='./img/menuclose.png'width='50'></button>
+    <br><h1>알란 엘리엇</h1><br>
+    <h4>라케이스 스탠필드</h4><br>
+    <a href='./img/cha/cha11.jpg' target='_blank'><img src='./img/cha/cha11.jpg' width='800'></a><br><br>
+    <h3>"예상이 보기 좋게 빗나갔군요"</h3><br>
+  </form></div>
+
+
+</section>
+
+<div class='clear'></div>
+<footer>  
+    <div class='copy'>MOVIE PLATFORM © 2019 POWSTER</div>
+    <div class='copyy'>© 2019 Lions Gate Entertainment Inc. ALL RIGHTS RESERVED.</div>
+    <img src='./img/lgf.png'  id='pd'>
+  </footer>
+
+<div class="sidenav">
+  <a href="https://www.facebook.com/KnivesOutOfficial/" target='_blank' ><img src='./img/facebook.png' width='30' class='small'></a>
+  <a href="https://www.instagram.com/knivesout/" target='_blank'><img src='./img/instagram.png' width='30'class='small'></a>
+  <a href="#home" ><img src='./img/top.png' width='30'class='small'></a>
+</div>
+<script>
+function openNav() {  document.getElementById("myNav").style.width = "400px";
+
+  document.body.style.backgroundColor = "rgba(0,0,0,0.6)"}
+function closeNav() {document.getElementById("myNav").style.width = "0%";
+document.getElementById("myNav").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";}
+
+  function openForm() {document.getElementById("myForm").style.display = "block";}
+function closeForm() {document.getElementById("myForm").style.display = "none";}
+
+function openForm1() {document.getElementById("myForm1").style.display = "block";}
+function closeForm1() {document.getElementById("myForm1").style.display = "none";}
+
+function openForm2() {document.getElementById("myForm2").style.display = "block";}
+function closeForm2() {document.getElementById("myForm2").style.display = "none";}
+
+  function openForm3() {document.getElementById("myForm3").style.display = "block";}
+function closeForm3() {document.getElementById("myForm3").style.display = "none";}
+
+function openForm4() {document.getElementById("myForm4").style.display = "block";}
+function closeForm4() {document.getElementById("myForm4").style.display = "none";}
+
+function openForm5() {document.getElementById("myForm5").style.display = "block";}
+function closeForm5() {document.getElementById("myForm5").style.display = "none";}
+
+  function openForm6() {document.getElementById("myForm6").style.display = "block";}
+function closeForm6() {document.getElementById("myForm6").style.display = "none";}
+
+function openForm7() {document.getElementById("myForm7").style.display = "block";}
+function closeForm7() {document.getElementById("myForm7").style.display = "none";}
+
+function openForm8() {document.getElementById("myForm8").style.display = "block";}
+function closeForm8() {document.getElementById("myForm8").style.display = "none";}
+
+  function openForm9() {document.getElementById("myForm9").style.display = "block";}
+function closeForm9() {document.getElementById("myForm9").style.display = "none";}
+
+function openForm10() {document.getElementById("myForm10").style.display = "block";}
+function closeForm10() {document.getElementById("myForm10").style.display = "none";}
+
+function openForm11() {document.getElementById("myForm11").style.display = "block";}
+function closeForm11() {document.getElementById("myForm11").style.display = "none";}
+
+function openForm12() {document.getElementById("myForm12").style.display = "block";}
+function closeForm12() {document.getElementById("myForm12").style.display = "none";}
+</script>
+     
+</body>
+</html>
